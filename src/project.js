@@ -1,4 +1,4 @@
-const project = () => {
+const project = (name, description) => {
   const todoList = [];
 
   const getTodoList = () => todoList.slice();
@@ -11,7 +11,9 @@ const project = () => {
     todoList.splice(index, 1);
   };
 
-  return { getTodoList, addTodoItem, removeTodoItem };
+  return {
+    name, description, getTodoList, addTodoItem, removeTodoItem,
+  };
 };
 
 export default project;
